@@ -9,7 +9,7 @@ const App = () => {
 
   let name = useSelector(state=>state.name);
   let email = useSelector(state=>state.email);
-  console.log('app',typeof name);
+  //console.log('app',typeof name);
 
   let dispatch = useDispatch();
   let [Name,setName] = useState('');
@@ -31,8 +31,10 @@ const App = () => {
         <label for='email'>Email:</label>
         <input onChange={e=>setEmail(e.target.value)} placeholder='enter the email' type='email' id='email'/>
         <p>Current values in store:</p>
-        <p>Name - {name}</p>
-        <p>Email - {email}</p>
+        <div className="output">
+          <p>Name - {name}</p>
+          <p>Email - {email}</p>
+        </div>
     </div>
   )
 }

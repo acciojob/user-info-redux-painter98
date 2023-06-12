@@ -10,12 +10,12 @@ const initialState = {
 
     switch(action.type){
         case NAME:
-            console.log('reducer',action.payload,state.name,state.email)
+            //console.log('reducer',action.payload,state.name,state.email)
             return ({
                 ...state,name:action.payload
             })
         case EMAIL:
-            console.log('reducer',state.name,state.email)
+            //console.log('reducer',state.name,state.email)
             return ({
                 ...state,email:action.payload
             })
