@@ -6,16 +6,18 @@ const initialState = {
 }
 
  let upDate = (state = initialState,action) => {
+    console.log('reducer action',action.payload);
+
     switch(action.type){
         case NAME:
-            console.log(state.name,state.email)
+            console.log('reducer',action.payload,state.name,state.email)
             return ({
-                ...state,name:action.payload.name,email:''
+                ...state,name:action.payload
             })
         case EMAIL:
-            console.log(state.name,state.email)
+            console.log('reducer',state.name,state.email)
             return ({
-                ...state,email:action.payload.email,name:''
+                ...state,email:action.payload
             })
         default:
             return state;
